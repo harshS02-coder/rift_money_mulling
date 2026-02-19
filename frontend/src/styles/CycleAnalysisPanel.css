@@ -1,0 +1,117 @@
+.cycle-analysis-panel {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.cycle-analysis-panel h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #7c3aed;
+  font-size: 1.3em;
+}
+
+.cycle-analysis-panel.loading {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cycle-analysis-panel.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.tab {
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: #7c3aed;
+}
+
+.tab.active {
+  color: #7c3aed;
+  border-bottom-color: #7c3aed;
+}
+
+.tab-content {
+  padding: 12px 0;
+}
+
+.overview-tab p {
+  margin: 8px 0;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.overview-tab strong {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.participants-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.participant {
+  background: #f3f4f6;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border-left: 3px solid #7c3aed;
+}
+
+.account-id {
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  color: #333;
+}
+
+.analysis-text {
+  line-height: 1.6;
+  color: #333;
+  font-size: 0.95em;
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.skeleton-panel {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 8px;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

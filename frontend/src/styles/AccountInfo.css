@@ -1,0 +1,211 @@
+/* AccountInfo.css */
+.account-info-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.account-info-panel.empty {
+  padding: 30px 20px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f8f9fa;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #212121;
+  font-family: 'Courier New', monospace;
+  word-break: break-word;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #212121;
+}
+
+.risk-indicator {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f0f0 100%);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.risk-badge {
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.score-display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.score-label {
+  font-size: 12px;
+  color: #757575;
+  font-weight: 500;
+}
+
+.score-value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.score-breakdown {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.score-breakdown h4 {
+  margin: 0 0 12px 0;
+  font-size: 13px;
+  color: #212121;
+  font-weight: 600;
+}
+
+.factor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+.factor-name {
+  min-width: 120px;
+  color: #212121;
+  font-weight: 500;
+}
+
+.factor-bar {
+  flex: 1;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  min-width: 60px;
+}
+
+.factor-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #fbc02d, #f57c00, #d32f2f);
+  transition: width 0.3s ease;
+  border-radius: 4px;
+}
+
+.factor-value {
+  min-width: 35px;
+  text-align: right;
+  color: #757575;
+  font-weight: 500;
+}
+
+.risk-factors {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.risk-factors h4 {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  color: #212121;
+  font-weight: 600;
+}
+
+.risk-factors ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.risk-factors li {
+  padding-left: 20px;
+  position: relative;
+  font-size: 12px;
+  color: #757575;
+  line-height: 1.4;
+}
+
+.risk-factors li::before {
+  content: '⚠️';
+  position: absolute;
+  left: 0;
+}
+
+.panel-footer {
+  padding: 15px;
+  background: #f8f9fa;
+  text-align: center;
+  margin-top: auto;
+}
+
+.info-text {
+  margin: 0;
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
+@media (max-width: 1200px) {
+  .account-info-panel {
+    font-size: 12px;
+  }
+
+  .panel-header h3 {
+    font-size: 14px;
+  }
+
+  .score-value {
+    font-size: 20px;
+  }
+
+  .factor-name {
+    min-width: 80px;
+  }
+}

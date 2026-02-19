@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rift-backend
+    runtime: python
+    pythonVersion: 3.11
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m app.main
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: PYTHON_VERSION
+        value: 3.11
+    healthCheckRoute: /docs

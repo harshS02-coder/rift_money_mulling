@@ -1,0 +1,18 @@
+RIFT 2026 - Money Muling Detection Engine Project
+
+Project created: February 19, 2026
+Purpose: Hackathon submission - Detect money laundering through graph-based financial forensics
+
+Tech Stack:
+- Backend: FastAPI (Python)
+- Frontend: React 18 + Vite + D3.js
+- Graph Processing: NetworkX
+- Algorithms: DFS cycle detection, temporal analysis
+
+Key Capabilities:
+✓ Cycle detection (rings of length 3-5)
+✓ Temporal smurfing detection (72-hour windows)
+✓ Shell account identification
+✓ Multi-factor risk scoring (0-100)
+✓ Interactive graph visualization
+✓ Real-time analysis

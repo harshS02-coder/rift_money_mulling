@@ -1,0 +1,141 @@
+.recommendations-list {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.recommendations-list h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #059669;
+  font-size: 1.1em;
+}
+
+.recommendations-list.loading {
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendations-list.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: step-counter;
+}
+
+.step-item {
+  counter-increment: step-counter;
+  margin-bottom: 12px;
+  background: #f9fafb;
+  border-left: 4px solid #059669;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.step-header {
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+
+.step-header:hover {
+  background: #f3f4f6;
+}
+
+.step-title {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+}
+
+.step-title::before {
+  content: counter(step-counter);
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: #059669;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  margin-right: 8px;
+  font-size: 0.85em;
+  font-weight: bold;
+}
+
+.priority-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.75em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.priority-badge.high {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.priority-badge.medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.priority-badge.low {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.step-details {
+  padding: 0 12px 12px 12px;
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.5;
+}
+
+.step-details p {
+  margin: 0;
+}
+
+.skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-list::before {
+  content: '';
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 6px;
+}
+
+.skeleton-list::after {
+  content: '';
+  height: 40px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 6px;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

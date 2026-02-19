@@ -1,0 +1,248 @@
+/* RingTable.css */
+.ring-table-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #e0e0e0;
+  background: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.tab {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #757575;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.tab:hover {
+  background: #f0f0f0;
+  color: #212121;
+}
+
+.tab.active {
+  color: #1976d2;
+  border-bottom: 3px solid #1976d2;
+  margin-bottom: -2px;
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.data-table thead {
+  background: #f8f9fa;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-table th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #212121;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.data-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.data-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 30px !important;
+  font-style: italic;
+}
+
+/* Ring Table Specific */
+.ring-id {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.accounts {
+  max-width: 250px;
+}
+
+.account-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.account-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'Courier New', monospace;
+}
+
+.length {
+  text-align: center;
+  font-weight: 600;
+  color: #f57c00;
+}
+
+.amount {
+  text-align: right;
+  font-weight: 500;
+  color: #388e3c;
+}
+
+.txn-count {
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Smurfing Table Specific */
+.account-id {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.fan-in-out {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.fan-in {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.fan-out {
+  color: #f57c00;
+  font-weight: 600;
+}
+
+.risk-score {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-bar {
+  flex: 1;
+  min-width: 80px;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.score-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #fbc02d, #f57c00, #d32f2f);
+  transition: width 0.3s ease;
+}
+
+.score-text {
+  min-width: 30px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Shell Accounts Table Specific */
+.throughput {
+  text-align: right;
+  font-weight: 500;
+  color: #d32f2f;
+}
+
+.avg-value {
+  text-align: right;
+  font-weight: 500;
+  color: #1976d2;
+}
+
+@media (max-width: 1200px) {
+  .data-table {
+    font-size: 12px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 10px 8px;
+  }
+
+  .accounts {
+    max-width: 150px;
+  }
+
+  .account-badge {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    gap: 5px;
+    padding: 0 5px;
+  }
+
+  .tab {
+    padding: 12px 10px;
+    font-size: 12px;
+  }
+
+  .data-table {
+    font-size: 11px;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 8px 5px;
+  }
+
+  .score-bar {
+    min-width: 60px;
+  }
+}
